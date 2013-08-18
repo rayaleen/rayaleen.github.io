@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Ray's Home]]></title>
   <link href="http://rayaleen.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-18T22:29:22+08:00</updated>
+  <updated>2013-08-18T22:57:40+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -38,16 +38,16 @@
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
-</span><span class='line'>cd octopress    # If you use RVM, You&rsquo;ll be asked if you trust the .rvmrc file (say yes).
-</span><span class='line'>ruby &mdash;version  # Should report Ruby 1.9.3</span></code></pre></td></tr></table></div></figure></notextile></div>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>$ cd octopress    # If you use RVM, You&rsquo;ll be asked if you trust the .rvmrc file (say yes).
+</span><span class='line'>$ ruby &mdash;version  # Should report Ruby 1.9.3</span></code></pre></td></tr></table></div></figure></notextile></div>
 下面安装依赖文件
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
-</span><span class='line'>bundle install
-</span><span class='line'>rake install</span></code></pre></td></tr></table></div></figure></notextile></div>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem install bundler
+</span><span class='line'>$ bundle install
+</span><span class='line'>$ rake install</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <h2>Deoploying to Github pages</h2>
 
@@ -55,7 +55,7 @@
 
 <p>在你的github下面创建一个符合username.github.io. 创建好之后就可以在本地Octopress配置github了
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure></notextile></div>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages</span></code></pre></td></tr></table></div></figure></notextile></div>
 这个命令将会帮你创建以下几点:</p></li>
 <li>询问你的github pages的repositiory url，这里可以填ssh地址比如：git@github.com:username/username.github.io.git</li>
 <li>重新命名origin到octopress</li>
@@ -66,16 +66,16 @@
 下面可以运行
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake generate
+</span><span class='line'>$ rake deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
 这将会创建你的blog，copy到</em>deploy/下面，然后add,commit,push到master branch。几秒钟之后你就会在你的blog上看到你刚才更新的内容
 也不要忘记把source下面的内容commit到github
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
-</span><span class='line'>git commit -m &lsquo;commit message&rsquo;
-</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add .
+</span><span class='line'>$ git commit -m &lsquo;commit message&rsquo;
+</span><span class='line'>$ git push origin source</span></code></pre></td></tr></table></div></figure></notextile></div></li>
 </ul>
 
 ]]></content>
