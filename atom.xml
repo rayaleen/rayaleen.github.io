@@ -4,7 +4,7 @@
   <title><![CDATA[Ray's Home]]></title>
   <link href="http://rayaleen.github.io/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-18T21:44:30+08:00</updated>
+  <updated>2013-08-18T22:10:50+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -29,13 +29,15 @@
 
 <ul>
 <li>Install <a href="http://git-scm.com/downloads">Git</a>,强烈推荐使用<a href="http://brew.sh/">Homebrew</a>来安装git</li>
-<li>Install Ruby 1.9.3 using <a href="https://rvm.io/">RVM</a>
-
-<blockquote><p>$ \curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable  &mdash;ruby =1.9.3</p>
-
-<h3>Setup Octopress</h3></blockquote></li>
+<li>Install Ruby 1.9.3 using <a href="https://rvm.io/">RVM</a></li>
 </ul>
 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ \curl -L https://get.rvm.io | bash -s stable  --ruby =1.9.3</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Setup Octopress</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -89,6 +91,8 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>git add .
 </span><span class='line'>git commit -m 'commit message'
 </span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
 
 ]]></content>
   </entry>
