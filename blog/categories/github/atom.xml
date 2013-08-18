@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Ray's Home]]></title>
   <link href="http://rayaleen.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-18T21:04:33+08:00</updated>
+  <updated>2013-08-18T21:44:30+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -20,7 +20,10 @@
     <id>http://rayaleen.github.io/blog/2013/08/18/github-pages-plus-octopress</id>
     <content type="html"><![CDATA[<p>发现现在很多git用户都开始使用<a href="http://pages.github.com/">github pages</a> + <a href="http://octopress.org/">octopress</a>来建立自己的blog。Octopress宣扬的是blogging framework for hacker,如果懂点shell commands和基本的git用法就可以使用。所以自己也打算尝试一下并且开启自己的blog。</p>
 
-<h2>Octopress Setupi</h2>
+<!--more --->
+
+
+<h2>Octopress Setup</h2>
 
 <h3>Requirement</h3>
 
@@ -36,7 +39,41 @@
 git clone git://github.com/imathis/octopress.git octopress
 cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
 ruby --version  # Should report Ruby 1.9.3
-</code></p></blockquote></li>
+</code>
+下面安装依赖文件
+<code>
+gem install bundler
+bundle install
+rake install
+</code></p>
+
+<h2>Deoploying to Github pages</h2>
+
+<h3>Create github repository</h3>
+
+<p>在你的github下面创建一个符合username.github.io. 创建好之后就可以在本地Octopress配置github了
+<code>
+rake setup_github_pages
+</code>
+这个命令将会帮你创建以下几点:</p></blockquote></li>
+<li>询问你的github pages的repositiory url，这里可以填ssh地址比如：git@github.com:username/username.github.io.git</li>
+<li>重新命名origin到octopress</li>
+<li>设置origin remote为自己的github pages的url</li>
+<li>从当前master branch切换到source</li>
+<li>根据repository来配置blog地址</li>
+<li>在<em>deploy下面建立master branch用作deployment
+下面可以运行
+<code>
+rake generate
+rake deploy
+</code>
+这将会创建你的blog，copy到</em>deploy/下面，然后add,commit,push到master branch。几秒钟之后你就会在你的blog上看到你刚才更新的内容
+也不要忘记把source下面的内容commit到github
+<code>
+git add .
+git commit -m 'commit message'
+git push origin source
+</code></li>
 </ul>
 
 ]]></content>
