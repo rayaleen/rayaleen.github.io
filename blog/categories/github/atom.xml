@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Ray's Home]]></title>
-  <link href="http://rayaleen.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: github | Ray's Home]]></title>
+  <link href="http://rayaleen.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
   <updated>2013-08-18T20:22:49+08:00</updated>
   <id>http://rayaleen.github.io/</id>
