@@ -85,18 +85,21 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 	<h1 class="title" itemprop="name">Github Pages + Octopress</h1>
-	<div class="entry-content" itemprop="articleBody"><p>发现现在很多git用户都开始使用<a href="http://pages.github.com/">github pages</a> + <a href="http://octopress.org/">octopress</a>来建立自己的blog。Octopress宣扬的是blogging framework for hacker,如果懂点shell commands和基本的git用法就可以使用。所以自己也打算尝试一下并且开启自己的blog。</p>
+	<div class="entry-content" itemprop="articleBody"><p>发现现在很多git用户都开始使用<a href="http://pages.github.com/">github pages</a> + <a href="http://octopress.org/">octopress</a>来建立自己的blog。Octopress宣扬的是blogging framework for hacker,如果懂点shell commands和基本的git用法就可以使用。所以自己也打算尝试一下并且开启自己的blog。
+<strong>Octopress Setup</strong>
+<strong><em>Reuirement</em></strong>
+* Install <a href="http://git-scm.com/downloads">Git</a>,强烈推荐使用<a href="http://brew.sh/">Homebrew</a>来安装git
+* Install Ruby 1.9.3 using <a href="https://rvm.io/">RVM</a></p>
 
-<h2>Octopress Setup</h2>
+<blockquote><p>$ \curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable  &mdash;ruby =1.9.3
+<strong><em>Setup Octopress</em></strong></p></blockquote>
 
-<h3>Reuirement</h3>
-
-<ul>
-<li>Install <a href="http://git-scm.com/downloads">Git</a>,强烈推荐使用<a href="http://brew.sh/">Homebrew</a>来安装git</li>
-<li>Install Ruby 1.9.3 using <a href="https://rvm.io/">RVM</a>
-
-<blockquote><p>$ \curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable  &mdash;ruby =1.9.3</p></blockquote></li>
-</ul>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
+</span><span class='line'>ruby --version  # Should report Ruby 1.9.3</span></code></pre></td></tr></table></div></figure>
 
 </div>
 

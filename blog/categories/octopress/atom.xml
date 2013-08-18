@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Ray's Home]]></title>
   <link href="http://rayaleen.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-18T20:46:41+08:00</updated>
+  <updated>2013-08-18T20:57:39+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -18,19 +18,19 @@
     <link href="http://rayaleen.github.io/blog/2013/08/18/github-pages-plus-octopress/"/>
     <updated>2013-08-18T20:21:00+08:00</updated>
     <id>http://rayaleen.github.io/blog/2013/08/18/github-pages-plus-octopress</id>
-    <content type="html"><![CDATA[<p>发现现在很多git用户都开始使用<a href="http://pages.github.com/">github pages</a> + <a href="http://octopress.org/">octopress</a>来建立自己的blog。Octopress宣扬的是blogging framework for hacker,如果懂点shell commands和基本的git用法就可以使用。所以自己也打算尝试一下并且开启自己的blog。</p>
+    <content type="html"><![CDATA[<p>发现现在很多git用户都开始使用<a href="http://pages.github.com/">github pages</a> + <a href="http://octopress.org/">octopress</a>来建立自己的blog。Octopress宣扬的是blogging framework for hacker,如果懂点shell commands和基本的git用法就可以使用。所以自己也打算尝试一下并且开启自己的blog。
+<strong>Octopress Setup</strong>
+<strong><em>Reuirement</em></strong>
+* Install <a href="http://git-scm.com/downloads">Git</a>,强烈推荐使用<a href="http://brew.sh/">Homebrew</a>来安装git
+* Install Ruby 1.9.3 using <a href="https://rvm.io/">RVM</a></p>
 
-<h2>Octopress Setup</h2>
-
-<h3>Reuirement</h3>
-
-<ul>
-<li>Install <a href="http://git-scm.com/downloads">Git</a>,强烈推荐使用<a href="http://brew.sh/">Homebrew</a>来安装git</li>
-<li>Install Ruby 1.9.3 using <a href="https://rvm.io/">RVM</a>
-
-<blockquote><p>$ \curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable  &mdash;ruby =1.9.3</p></blockquote></li>
-</ul>
-
+<blockquote><p>$ \curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable  &mdash;ruby =1.9.3
+<strong><em>Setup Octopress</em></strong>
+<code>
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
+ruby --version  # Should report Ruby 1.9.3
+</code></p></blockquote>
 ]]></content>
   </entry>
   
