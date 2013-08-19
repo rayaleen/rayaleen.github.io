@@ -4,7 +4,7 @@
   <title><![CDATA[Ray's Home]]></title>
   <link href="http://rayaleen.github.io/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-19T23:32:02+08:00</updated>
+  <updated>2013-08-19T23:34:57+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -32,7 +32,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ ssh root@192.168.1.1</span></code></pre></td></tr></table></div></figure>
 
 
-<p>If you have installed openssh, you&rsquo;d better to change the default password to protect your ios devic </br>e
+<p>If you have installed openssh, you&rsquo;d better to change the default password to protect your ios devic </br>
 (<a href="https://rayaleen.github.io/images/packet_trace/ssh.png">https://rayaleen.github.io/images/packet_trace/ssh.png</a>)
 3. As ios system actually is a branch of unix(Darwin), we use unix command as usual. But now the system only provide basic command such like &lsquo;ls&rsquo;, so if we want to use tcpdump, we need to install it first. The easiest way to install command is to use apt-get. But as this is also inavailable, we can install apt-get command by cydia.
 4. Seach apt in Cydia and install APT 6.0 transitional package. After installed, you can use apt-get command to install unix tool.
