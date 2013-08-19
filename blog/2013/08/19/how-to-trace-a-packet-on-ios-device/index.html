@@ -87,22 +87,24 @@
 
 <ol>
 <li>First we need to jailbreak ios device, this is compulsory.</li>
-<li>Open cydia, search and install <a href="http://www.openssh.org/">openssh</a>. After openssh has been installed, now you can use ssh to connect your iphone if you are in the same sub-network. You can login ios device with root accout and the default password alpine
-&lt;% codeblock %>
-$ ssh <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x72;&#x6f;&#x6f;&#116;&#x40;&#x31;&#57;&#50;&#46;&#49;&#54;&#x38;&#46;&#49;&#x2e;&#49;">&#114;&#x6f;&#111;&#116;&#64;&#49;&#57;&#50;&#46;&#49;&#x36;&#x38;&#x2e;&#x31;&#46;&#49;</a>
-&lt;% endcodeblock %>
-If you have installed openssh, you&rsquo;d better to change the default password to protect your ios device
-<img src="/images/packet_trace/ssh.png"></li>
-<li>As ios system actually is a branch of unix(Darwin), we use unix command as usual. But now the system only provide basic command such like &lsquo;ls&rsquo;, so if we want to use tcpdump, we need to install it first. The easiest way to install command is to use apt-get. But as this is also inavailable, we can install apt-get command by cydia.</li>
-<li>Seach apt in Cydia and install APT 6.0 transitional package. After installed, you can use apt-get command to install unix tool.
-<img src="/images/packet_trace/install-tcpdump.png">
+<li>Open cydia, search and install <a href="http://www.openssh.org/">openssh</a>. After openssh has been installed, now you can use ssh to connect your iphone if you are in the same sub-network. You can login ios device with root accout and the default password alpine</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ssh root@192.168.1.1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you have installed openssh, you&rsquo;d better to change the default password to protect your ios device
+<img src="/images/packet_trace/ssh.png">
+3. As ios system actually is a branch of unix(Darwin), we use unix command as usual. But now the system only provide basic command such like &lsquo;ls&rsquo;, so if we want to use tcpdump, we need to install it first. The easiest way to install command is to use apt-get. But as this is also inavailable, we can install apt-get command by cydia.
+4. Seach apt in Cydia and install APT 6.0 transitional package. After installed, you can use apt-get command to install unix tool.
+<img src="/images/packet_trace/install-tcpdump.png"></p>
 
 <h2>Start to capture packet</h2>
 
 <p>Now, we can start to cpature packet on ios device. Before that we&rsquo;d better to check which network interface is used for send packet.
-<img src="/images/packet_trace/ifconfig"></p></li>
-</ol>
-
+<img src="/images/packet_trace/ifconfig.png"></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ tcpdump -i en0 -s 0 -w /tmp/DumpFile.pcap //if no -s 0, when analyse by wireshark, it will reports "packet size limited during capture"</span></code></pre></td></tr></table></div></figure>

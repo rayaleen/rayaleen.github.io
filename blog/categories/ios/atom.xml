@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Ray's Home]]></title>
   <link href="http://rayaleen.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-19T22:54:32+08:00</updated>
+  <updated>2013-08-19T22:57:11+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -25,9 +25,8 @@
 <ol>
 <li>First we need to jailbreak ios device, this is compulsory.</li>
 <li>Open cydia, search and install <a href="http://www.openssh.org/">openssh</a>. After openssh has been installed, now you can use ssh to connect your iphone if you are in the same sub-network. You can login ios device with root accout and the default password alpine
-&lt;% codeblock %>
-$ ssh <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#114;&#111;&#x6f;&#x74;&#64;&#x31;&#57;&#50;&#46;&#49;&#x36;&#56;&#46;&#x31;&#x2e;&#49;">&#114;&#x6f;&#x6f;&#x74;&#x40;&#49;&#x39;&#50;&#x2e;&#49;&#54;&#x38;&#x2e;&#x31;&#46;&#x31;</a>
-&lt;% endcodeblock %>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ssh &lt;a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x72;&#x6f;&#111;&#116;&#x40;&#49;&#57;&#50;&#x2e;&#49;&#54;&#56;&#x2e;&#49;&#46;&#49;">&#x72;&#111;&#111;&#x74;&#64;&#49;&#x39;&#x32;&#x2e;&#x31;&#54;&#x38;&#x2e;&#x31;&#x2e;&#49;&lt;/a></span></code></pre></td></tr></table></div></figure></notextile></div>
 If you have installed openssh, you&rsquo;d better to change the default password to protect your ios device
 <img src="/images/packet_trace/ssh.png"></li>
 <li>As ios system actually is a branch of unix(Darwin), we use unix command as usual. But now the system only provide basic command such like &lsquo;ls&rsquo;, so if we want to use tcpdump, we need to install it first. The easiest way to install command is to use apt-get. But as this is also inavailable, we can install apt-get command by cydia.</li>
@@ -37,7 +36,7 @@ If you have installed openssh, you&rsquo;d better to change the default password
 <h2>Start to capture packet</h2>
 
 <p>Now, we can start to cpature packet on ios device. Before that we&rsquo;d better to check which network interface is used for send packet.
-<img src="/images/packet_trace/ifconfig">
+<img src="/images/packet_trace/ifconfig.png">
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ tcpdump -i en0 -s 0 -w /tmp/DumpFile.pcap //if no -s 0, when analyse by wireshark, it will reports &ldquo;packet size limited during capture&rdquo;</span></code></pre></td></tr></table></div></figure></notextile></div>
 After dump packet to a local file, we can use scp to transfer the file to local and analyse with wireshark.</p></li>
