@@ -4,7 +4,7 @@
   <title><![CDATA[Ray's Home]]></title>
   <link href="http://rayaleen.github.io/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-20T22:47:40+08:00</updated>
+  <updated>2013-08-20T22:52:23+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -85,7 +85,7 @@
 </span><span class='line'>$ ruby --version  # Should report Ruby 1.9.3</span></code></pre></td></tr></table></div></figure>
 
 
-<p>下面安装依赖文件</p>
+<p>下面安装依赖文件和安装octopress</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -106,12 +106,12 @@
 
 
 <p>这个命令将会帮你创建以下几点:
-1. 询问你的github pages的repositiory url，这里可以填ssh地址比如：git@github.com:username/username.github.io.git
-2. 重新命名origin到octopress
-3. 设置origin remote为自己的github pages的url
-4. 从当前master branch切换到source
-5. 根据repository来配置blog地址
-6. 在_deploy下面建立master branch用作deployment
+&ndash; 询问你的github pages的repositiory url，这里可以填ssh地址比如：git@github.com:username/username.github.io.git
+&ndash; 重新命名origin到octopress
+&ndash; 设置origin remote为自己的github pages的url
+&ndash; 从当前master branch切换到source
+&ndash; 根据repository来配置blog地址
+&ndash; 在_deploy下面建立master branch用作deployment
 下面可以运行</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
