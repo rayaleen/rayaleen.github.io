@@ -4,7 +4,7 @@
   <title><![CDATA[Ray's Home]]></title>
   <link href="http://rayaleen.github.io/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-27T21:33:11+08:00</updated>
+  <updated>2013-08-27T21:36:08+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -27,8 +27,9 @@ Objective-C在C原有的空值的表达上增加了nil, nil是一个指向空值
 
 <p>除此之外，在，Nil被定义为指向空值的类指针，这个不像nil出现很多次，但是也是表达空值。</p>
 
-<p>关于nil的一些东东
-新创建的NSObject开始于内部值都为0。也就是说，它所包含的指向其他对象的指针都是以nil开始的，所以没有必要在ini的方法里，把指针设为nil.</p>
+<h3>关于nil的一些东东</h3>
+
+<p>新创建的NSObject开始于内部值都为0。也就是说，它所包含的指向其他对象的指针都是以nil开始的，所以没有必要在ini的方法里，把指针设为nil.</p>
 
 <p>也许nil最引人注目的好处就是可以往它发送消息。
 在其他语言里面，比如c++，这个会使你的程序崩溃，但是在objective-C里面，在nil上调用一个方法只会返回0值。这是一个简单的表达方式，因为你在任何事情之前都不用复查一下是否是nil。</p>
@@ -45,9 +46,11 @@ Objective-C在C原有的空值的表达上增加了nil, nil是一个指向空值
 </span><span class='line'>if ([name isEqualToString:@"steve"]) { ... }</span></code></pre></td></tr></table></div></figure>
 
 
-<p>应该意识到nil在Objective-C里面的这个特征给我们带了很多方便，而不是代码上潜在的bug。在那些确实不需要nil值的地方，通过增加一些核对的方法尽早返回或者通过使用NSAssertParameter来抛出异常。
-NSNULL : 为了表达空值的值
-NSNULL是为了在Fouundation和其他框架里绕过一个结合类的限制，比如NSArray和NSDictionary不可以包含nil值。你可以把NSNULL想象成为NULL或者是nil的封装类，这样子他们就可以用于集合类里面</p>
+<p>应该意识到nil在Objective-C里面的这个特征给我们带了很多方便，而不是代码上潜在的bug。在那些确实不需要nil值的地方，通过增加一些核对的方法尽早返回或者通过使用NSAssertParameter来抛出异常。</p>
+
+<h3>NSNULL : 为了表达空值的值</h3>
+
+<p>NSNULL是为了在Fouundation和其他框架里绕过一个结合类的限制，比如NSArray和NSDictionary不可以包含nil值。你可以把NSNULL想象成为NULL或者是nil的封装类，这样子他们就可以用于集合类里面</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
