@@ -1,0 +1,59 @@
+---
+layout: post
+title: "Apple HLS Study"
+date: 2013-08-23 23:19
+comments: true
+categories: [iOS, HLS] 
+---
+最近因为工作需要了解Apple HLS(HTTP Live Streaming)的技术，看了很多文档资料，就把自己的一些理解写下来算作一个总结。
+<!--more-->>
+
+##什么是HLS
+HLS是苹果公司提出一个可以在iOS, iPad或者QuickTime运行的一个HTTP流媒体解决方案。现在主流的网络视频软件，基本上都会提供VOD(video on demand)和live这两种播放方式，当然使用HLS也可以实现同样的功能。既然称作streaming,就应该有一些stream的特质，最主要的就是客户端不会一次获得视频源文件甚至下载地址，而且通过一系列的数据流不停的提供给客户端，从而实现完整的视频流的感觉。 
+
+##Stream如何实现
+HLS的stream是怎么样实现的呢？在这篇[blog](http://blog.nkbit.com/2011/11/http-live-streaming.html)里面，作者用一个黄瓜切片的例子来解释HLS stream的原理。其实就是将一个视频文件通过一系列的工具，最后切成一片一片(slice)的视频文件(ts file)，然后把这些视频文件按照播放顺序放在m3u8的playlist里面，播放器看到这个m3u8的playlist就知道该去哪拿视频，按照什么顺序播放了。
+
+##M3U8
+下面是一个VOD M3U8的例子
+{% codeblock %}
+#EXTM3U
+#EXT-X-PLAYLIST-TYPE:VOD    
+#EXT-X-TARGETDURATION:10  //最大duration是10s
+#EXT-X-VERSION:3
+#EXT-X-MEDIA-SEQUENCE:0
+#EXTINF:10.0,
+http://example.com/movie1/fileSequenceA.ts
+#EXTINF:10.0,
+http://example.com/movie1/fileSequenceB.ts
+#EXTINF:10.0,
+http://example.com/movie1/fileSequenceC.ts
+#EXTINF:9.0,
+http://example.com/movie1/fileSequenceD.ts
+#EXT-X-ENDLIST
+{% endcodeblock %}
+在上面的M3U8里面，很清晰的描述了playlist type是VOD(#EXT-X-PLAYLIST-TYPE)，playlist version是3(#EXT-X-VERSION)， 每个ts的duration是10s(#EXTINF:10.0)，我们可以知道每一个ts的地址(http://example.com/movie1/fileSequenceA.ts)，然后player就会用这个地址和顺序去播放视频。因为是VOD类型，所以最后加了#EXT-X-ENDLIST，如果没有这个tag，那就是live streaming，并且这个m3u8 playlist 将会是一个Sliding Window，里面ts的序列是不停增加和移除的，而且每变动一次，EXT-X-MEDIA-SEQUENCE这个tag也会相应的+1.关于更多tag的描述可以参考[Example Playlist Files for use with HTTP Live Streaming](https://developer.apple.com/library/ios/technotes/tn2288/_index.html)
+
+##Adaptive Stream
+HLS还支持Adaptive Stream，就是说可以提供给用户不同bandwidth，resolution的stream,然后player会根据用户现在网络情况，用的是iPhone还是iPad来选择最合适的stream。
+首先，server要首先提供一个basic variant playlist
+{% codeblock %}
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=150000,RESOLUTION=416x234, \
+CODECS="avc1.42e00a,mp4a.40.2"
+http://example.com/low/index.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=240000,RESOLUTION=416x234, \
+CODECS="avc1.42e00a,mp4a.40.2"
+http://example.com/lo_mid/index.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=440000,RESOLUTION=416x234, \
+CODECS="avc1.42e00a,mp4a.40.2"
+http://example.com/hi_mid/index.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=640000,RESOLUTION=640x360, \
+CODECS="avc1.42e00a,mp4a.40.2"
+http://example.com/high/index.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=64000,CODECS="mp4a.40.5"
+http://example.com/audio/index.m3u8
+{% endcodeblock %}
+可以看到，这个M3U8里面包含了五种不同bandwidth和resolution视频源，当player读取这个M3U8之后，就会根据现在用户的bandwidth和device来确定用哪一个片源的index.M3U8,然后再去读一个新的M3U8就可以播放了。如果中间player发现用户的bandwidth升高或者降低，也会相应的调整片源来实现adaptive stream.
+
+如果用html5的video tag也只能在safari上正常播放HLS，如果是Chrome或者是Firefox，就会彻底的死火更别说Adaptive Stream.
