@@ -34,6 +34,7 @@ $ rake install
 $ rake setup_github_pages
 {% endcodeblock %}
 这个命令将会帮你创建以下几点:
+
 1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：`git@github.com:username/username.github.io.git`.
 2. 重新命名origin到octopress.
 3. 设置origin remote为自己的github pages的url.
