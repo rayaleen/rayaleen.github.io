@@ -27,6 +27,7 @@
     <script src="/javascripts/ajaxify.js"></script>
    
     
+
     
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -136,19 +137,19 @@
 
 <h3>Create github repository</h3>
 
-<p>在你的github下面创建一个符合username.github.io. 创建好之后就可以在本地Octopress配置github了</p>
+<p>在你的github下面创建一个符合<code>username.github.io</code>. 创建好之后就可以在本地Octopress配置github了</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
 
 
 <p>这个命令将会帮你创建以下几点:
-1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：git@github.com:username/username.github.io.git
-2. 重新命名origin到octopress
-3. 设置origin remote为自己的github pages的url
-4. 从当前master branch切换到source
-5. 根据repository来配置blog地址
-6. 在_deploy下面建立master branch用作deployment
+1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：<code>git@github.com:username/username.github.io.git</code>.
+2. 重新命名origin到octopress.
+3. 设置origin remote为自己的github pages的url.
+4. 从当前master branch切换到source.
+5. 根据repository来配置blog地址.
+6. 在_deploy下面建立master branch用作deployment.
 下面可以运行</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
