@@ -38,7 +38,7 @@ NSLog(@"Keys: %@", [mutableDictionary allKeys]); // @[@"someKey"]
 {% endcodeblock %}
 总结一下，每个Objective-C程序员都应该了解的四中代表空值的值:
 Symbol | Value | Meaning
-:----------|:------------:|----------:
+:-----------|:----------:|--------:
 NULL | (void *)0 | literal null value for C pointers
 nil | (id)0 | literal null value for Objective-C objects
 Nil | (Class)0 | literal null value for Objective-C classes
