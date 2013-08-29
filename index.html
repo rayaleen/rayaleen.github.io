@@ -166,13 +166,40 @@ NSNull是为了在Fouundation和其他框架里绕过一个结合类的限制，
 </span><span class='line'>NSLog(@"Keys: %@", [mutableDictionary allKeys]); // @[@"someKey"]</span></code></pre></td></tr></table></div></figure>
 
 
-<p>总结一下，每个Objective-C程序员都应该了解的四中代表空值的值:
-Symbol | Value | Meaning
-:&mdash;&mdash;&mdash;&mdash;&mdash;|:&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;:|&mdash;&mdash;&mdash;&mdash;&mdash;:
-NULL | (void *)0 | literal null value for C pointers
-nil | (id)0 | literal null value for Objective-C objects
-Nil | (Class)0 | literal null value for Objective-C classes
-NSNull | [NSNull null] | singleton object used to represent null</p>
+<p>总结一下，每个Objective-C程序员都应该了解的四中代表空值的值:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Symbol </th>
+<th align="center"> Value </th>
+<th align="right"> Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NULL </td>
+<td align="center"> (void *)0 </td>
+<td align="right"> literal null value for C pointers</td>
+</tr>
+<tr>
+<td align="left">nil </td>
+<td align="center"> (id)0 </td>
+<td align="right"> literal null value for Objective-C objects</td>
+</tr>
+<tr>
+<td align="left">Nil </td>
+<td align="center"> (Class)0 </td>
+<td align="right"> literal null value for Objective-C classes</td>
+</tr>
+<tr>
+<td align="left">NSNull </td>
+<td align="center"> [NSNull null] </td>
+<td align="right"> singleton object used to represent null</td>
+</tr>
+</tbody>
+</table>
+
 
 		
 		

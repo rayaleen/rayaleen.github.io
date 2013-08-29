@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Ray's Home]]></title>
   <link href="http://rayaleen.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-29T23:14:11+08:00</updated>
+  <updated>2013-08-29T23:22:40+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -49,16 +49,43 @@ NSNull是为了在Fouundation和其他框架里绕过一个结合类的限制，
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>NSMutableDictionary &lt;em>mutableDictionary = [NSMutableDictionary dictionary];
+</pre></td><td class='code'><pre><code class=''><span class='line'>NSMutableDictionary *mutableDictionary = [NSMutableDictionary dictionary];
 </span><span class='line'>mutableDictionary[@&ldquo;someKey&rdquo;] = [NSNull null]; // Sets value of NSNull singleton for &lt;code>someKey&lt;/code>
 </span><span class='line'>NSLog(@&ldquo;Keys: %@&rdquo;, [mutableDictionary allKeys]); // @[@&ldquo;someKey&rdquo;]</span></code></pre></td></tr></table></div></figure></notextile></div>
-总结一下，每个Objective-C程序员都应该了解的四中代表空值的值:
-Symbol | Value | Meaning
-:&mdash;&mdash;&mdash;&mdash;&mdash;|:&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;:|&mdash;&mdash;&mdash;&mdash;&mdash;:
-NULL | (void </em>)0 | literal null value for C pointers
-nil | (id)0 | literal null value for Objective-C objects
-Nil | (Class)0 | literal null value for Objective-C classes
-NSNull | [NSNull null] | singleton object used to represent null</p>
+总结一下，每个Objective-C程序员都应该了解的四中代表空值的值:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Symbol </th>
+<th align="center"> Value </th>
+<th align="right"> Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NULL </td>
+<td align="center"> (void *)0 </td>
+<td align="right"> literal null value for C pointers</td>
+</tr>
+<tr>
+<td align="left">nil </td>
+<td align="center"> (id)0 </td>
+<td align="right"> literal null value for Objective-C objects</td>
+</tr>
+<tr>
+<td align="left">Nil </td>
+<td align="center"> (Class)0 </td>
+<td align="right"> literal null value for Objective-C classes</td>
+</tr>
+<tr>
+<td align="left">NSNull </td>
+<td align="center"> [NSNull null] </td>
+<td align="right"> singleton object used to represent null</td>
+</tr>
+</tbody>
+</table>
+
 ]]></content>
   </entry>
   
