@@ -4,7 +4,7 @@
   <title><![CDATA[Ray's Home]]></title>
   <link href="http://rayaleen.github.io/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-29T23:22:40+08:00</updated>
+  <updated>2013-08-29T23:26:24+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -63,31 +63,31 @@ NSNull是为了在Fouundation和其他框架里绕过一个结合类的限制，
 <table>
 <thead>
 <tr>
-<th align="left">Symbol </th>
+<th align="center">Symbol </th>
 <th align="center"> Value </th>
-<th align="right"> Meaning</th>
+<th align="center"> Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">NULL </td>
+<td align="center">NULL </td>
 <td align="center"> (void *)0 </td>
-<td align="right"> literal null value for C pointers</td>
+<td align="center"> literal null value for C pointers</td>
 </tr>
 <tr>
-<td align="left">nil </td>
+<td align="center">nil </td>
 <td align="center"> (id)0 </td>
-<td align="right"> literal null value for Objective-C objects</td>
+<td align="center"> literal null value for Objective-C objects</td>
 </tr>
 <tr>
-<td align="left">Nil </td>
+<td align="center">Nil </td>
 <td align="center"> (Class)0 </td>
-<td align="right"> literal null value for Objective-C classes</td>
+<td align="center"> literal null value for Objective-C classes</td>
 </tr>
 <tr>
-<td align="left">NSNull </td>
+<td align="center">NSNull </td>
 <td align="center"> [NSNull null] </td>
-<td align="right"> singleton object used to represent null</td>
+<td align="center"> singleton object used to represent null</td>
 </tr>
 </tbody>
 </table>
