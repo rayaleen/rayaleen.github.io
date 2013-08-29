@@ -29,17 +29,17 @@ $ rake install
 {% endcodeblock %}
 ##Deoploying to Github pages
 ###Create github repository
-在你的github下面创建一个符合username.github.io. 创建好之后就可以在本地Octopress配置github了
+在你的github下面创建一个符合`username.github.io`. 创建好之后就可以在本地Octopress配置github了
 {% codeblock %}
 $ rake setup_github_pages
 {% endcodeblock %}
 这个命令将会帮你创建以下几点:
-1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：git@github.com:username/username.github.io.git
-2. 重新命名origin到octopress
-3. 设置origin remote为自己的github pages的url
-4. 从当前master branch切换到source
-5. 根据repository来配置blog地址
-6. 在_deploy下面建立master branch用作deployment
+1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：`git@github.com:username/username.github.io.git`.
+2. 重新命名origin到octopress.
+3. 设置origin remote为自己的github pages的url.
+4. 从当前master branch切换到source.
+5. 根据repository来配置blog地址.
+6. 在_deploy下面建立master branch用作deployment.
 下面可以运行
 {% codeblock %}
 $ rake generate
