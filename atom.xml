@@ -4,7 +4,7 @@
   <title><![CDATA[Ray's Home]]></title>
   <link href="http://rayaleen.github.io/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-29T23:26:24+08:00</updated>
+  <updated>2013-08-29T23:27:04+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -281,8 +281,9 @@ NSNull是为了在Fouundation和其他框架里绕过一个结合类的限制，
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
 
 
-<p>这个命令将会帮你创建以下几点:
-1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：<code>git@github.com:username/username.github.io.git</code>.
+<p>这个命令将会帮你创建以下几点:</p>
+
+<p>1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：<code>git@github.com:username/username.github.io.git</code>.
 2. 重新命名origin到octopress.
 3. 设置origin remote为自己的github pages的url.
 4. 从当前master branch切换到source.

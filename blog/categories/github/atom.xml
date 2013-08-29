@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Ray's Home]]></title>
   <link href="http://rayaleen.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://rayaleen.github.io/"/>
-  <updated>2013-08-29T23:26:24+08:00</updated>
+  <updated>2013-08-29T23:27:04+08:00</updated>
   <id>http://rayaleen.github.io/</id>
   <author>
     <name><![CDATA[Ray Chen]]></name>
@@ -56,13 +56,16 @@
 <p>在你的github下面创建一个符合<code>username.github.io</code>. 创建好之后就可以在本地Octopress配置github了
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages</span></code></pre></td></tr></table></div></figure></notextile></div>
-这个命令将会帮你创建以下几点:
-1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：<code>git@github.com:username/username.github.io.git</code>.</p></li>
-<li>重新命名origin到octopress.</li>
-<li>设置origin remote为自己的github pages的url.</li>
-<li>从当前master branch切换到source.</li>
-<li>根据repository来配置blog地址.</li>
-<li>在<em>deploy下面建立master branch用作deployment.
+这个命令将会帮你创建以下几点:</p></li>
+</ul>
+
+
+<p>1 .询问你的github pages的repositiory url，这里可以填ssh地址比如：<code>git@github.com:username/username.github.io.git</code>.
+2. 重新命名origin到octopress.
+3. 设置origin remote为自己的github pages的url.
+4. 从当前master branch切换到source.
+5. 根据repository来配置blog地址.
+6. 在<em>deploy下面建立master branch用作deployment.
 下面可以运行
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -75,9 +78,7 @@
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git add .
 </span><span class='line'>$ git commit -m &lsquo;commit message&rsquo;
-</span><span class='line'>$ git push origin source</span></code></pre></td></tr></table></div></figure></notextile></div></li>
-</ul>
-
+</span><span class='line'>$ git push origin source</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
